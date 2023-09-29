@@ -22,3 +22,19 @@ export const getStateWiseConfimed = async (req, res, next) => {
     });
   }
 };
+
+export const getForeignStateWiseConfimed = async (req, res, next) => {
+  try {
+    const data = await CIndiaService.getForeignStateWiseConfimed();
+    res.status(HttpStatus.OK).json({
+      code: HttpStatus.OK,
+      data: data,
+      message: 'covid19 details fetched successfully'
+    });
+  } catch (error) {
+    res.status(HttpStatus.BAD_REQUEST).json({
+      code: HttpStatus.BAD_REQUEST,
+      message: error.message
+    });
+  }
+};
