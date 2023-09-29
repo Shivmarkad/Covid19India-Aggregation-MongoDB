@@ -7,9 +7,9 @@ import * as CIndiaService from '../services/cIndia.service';
  * @param {object} res - response object
  * @param {Function} next
  */
-export const getData = async (req, res, next) => {
+export const getStateWiseConfimed = async (req, res, next) => {
   try {
-    const data = await CIndiaService.getData();
+    const data = await CIndiaService.getStateWiseConfimed();
     res.status(HttpStatus.OK).json({
       code: HttpStatus.OK,
       data: data,
