@@ -3,6 +3,7 @@ const router = express.Router();
 
 import cIndia from './cIndia.route';
 import vaccine from './vaccine.route';
+import testing from './testing.route';
 /**
  * Function contains Application routes
  *
@@ -14,6 +15,7 @@ const routes = () => {
   });
   router.use('/cIndia', cIndia);
   router.use('/vaccine', vaccine);
+  router.use('/testing', testing);
 
   return router;
 };
