@@ -23,18 +23,3 @@ export const getStateWiseConfimed = async (req, res, next) => {
   }
 };
 
-export const getStateWiseAvgDosesAdmPD = async (req, res, next) => {
-  try {
-    const data = await vaccineService.getStateWiseAvgDosesAdmPD(req.query.state);
-    res.status(HttpStatus.OK).json({
-      code: HttpStatus.OK,
-      data: data,
-      message: 'vaccination details fetched successfully'
-    });
-  } catch (error) {
-    res.status(HttpStatus.BAD_REQUEST).json({
-      code: HttpStatus.BAD_REQUEST,
-      message: error.message
-    });
-  }
-};
