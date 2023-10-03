@@ -7,7 +7,9 @@ export const getStateWiseDosesAdm = async (state) => {
     {
       $group: {
         _id: '$State',
-        totalAdministered: { $sum: '$Total Doses Administered' }
+        totalAdministered: { $sum: "$Total Doses Administered" },
+        totalMaleVaccinated: { $sum: "$Male (Doses Administered)" },
+        totalFemaleVaccinated: { $sum: "$Female (Doses Administered)" }
       }
     }
   ]);
