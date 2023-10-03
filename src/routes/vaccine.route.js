@@ -6,5 +6,4 @@ const router = express.Router();
 //route to get data
 router.get('', vaccineController.getStateWiseConfimed);
 
-router.get('/avg', vaccineController.getStateWiseAvgDosesAdmPD);
 export default router;
